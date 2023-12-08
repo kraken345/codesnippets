@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class abcs {
+	public static void main(String[] args) throws IOException {
+		BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter pw = new PrintWriter(System.out);
+	
+		StringTokenizer st = new StringTokenizer(r.readLine());
+
+		int[] numbers = new int[7];
+		for(int i = 0; i < 7;i++){
+			numbers[i] = Integer.parseInt(st.nextToken());
+		}
+
+		Arrays.sort(numbers);
+
+		int a = numbers[0];
+		int b = numbers[1];
+		int c = numbers[6] - a - b;
+
+		pw.print(a);
+		pw.print(' ');
+		pw.print(b);
+		pw.print(' ');
+		pw.print(c);
+
+
+		pw.close();
+	}
+}
